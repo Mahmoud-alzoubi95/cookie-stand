@@ -33,9 +33,9 @@ cookperHour : [] ,
 
  summation : function () {
     for ( let i=0 ; i<this.cookperHour.length ;i++){
-       
-        return this.sum=this.sum + this.cookperHour[i] ; 
+        this.sum = this.sum + this.cookperHour[i] ;  
     } 
+    return  this.sum ;
     },
 
 render : function () {
