@@ -95,31 +95,31 @@ SalmonCookies.prototype.render = function () {
 
 
 
-let seattle = new SalmonCookies("seattle", 30, 60, 6.3);
+let seattle = new SalmonCookies("seattle", 23, 65	, 6.3);
 seattle.customerperHour();
 seattle.cookiesPerhour();
 seattle.summation();
 seattle.render();
 
-let Dubai = new SalmonCookies("Dubai", 50, 30, 6.3);
+let Dubai = new SalmonCookies("Dubai", 11 , 38 , 3.7 );
 Dubai.customerperHour();
 Dubai.cookiesPerhour();
 Dubai.summation();
 Dubai.render();
 
-let Tokyo = new SalmonCookies("Tokyo", 50, 30, 6.3);
+let Tokyo = new SalmonCookies("Tokyo", 3 , 24 , 1.2 );
 Tokyo.customerperHour();
 Tokyo.cookiesPerhour();
 Tokyo.summation();
 Tokyo.render();
 
-let Paris = new SalmonCookies("Paris", 50, 30, 6.3);
+let Paris = new SalmonCookies("Paris", 20	, 38, 2.3 );
 Paris.customerperHour();
 Paris.cookiesPerhour();
 Paris.summation();
 Paris.render();
 
-let Lima = new SalmonCookies("Lima", 50, 30, 6.3);
+let Lima = new SalmonCookies("Lima", 2 , 16 , 	4.6 );
 Lima.customerperHour();
 Lima.cookiesPerhour();
 Lima.summation();
