@@ -57,20 +57,20 @@ SalmonCookies.prototype.summation = function () {
   return this.sum;
 };
 
-let tr = document.createElement("tr");
-table.appendChild(tr);
-let th = document.createElement("th");
-tr.appendChild(th);
+// let tr = document.createElement("tr");
+// table.appendChild(tr);
+// let th = document.createElement("th");
+// tr.appendChild(th);
 
-for (let i = 0; i < hours.length; i++) {
-  let th = document.createElement("th");
-  tr.appendChild(th);
-  th.textContent = hours[i];
-}
+// for (let i = 0; i < hours.length; i++) {
+//   let th = document.createElement("th");
+//   tr.appendChild(th);
+//   th.textContent = hours[i];
+// }
 
-let total = document.createElement("th");
-tr.appendChild(total);
-total.textContent = "Daily Location Total ";
+// let total = document.createElement("th");
+// tr.appendChild(total);
+// total.textContent = "Daily Location Total ";
 
 SalmonCookies.prototype.render = function () {
   let tr1 = document.createElement("tr");
@@ -95,6 +95,77 @@ SalmonCookies.prototype.render = function () {
 
 
 
+
+
+
+
+
+
+
+
+
+let form = document.getElementById('cookiesform');
+
+form.addEventListener('submit', newlocatoincrearting)
+
+
+function newlocatoincrearting (event) {
+
+  event.preventDefault();
+  console.log(event);
+
+  let locationName = event.target.lacationname.value;
+  // lacationname = lacationname.split();
+  //   console.log(lacationname);
+
+    let max = event.target.maximumValue.value;
+     max = parseInt(max);
+     console.log(max)
+
+     let min = event.target.minimumValue.value;
+     min = parseInt(min);
+
+     let Avg = event.target.averageValue.value;
+     Avg = parseFloat(Avg);
+
+    
+
+
+
+
+
+
+table.innerHTML = "";
+
+let tr = document.createElement("tr");
+table.appendChild(tr);
+let th = document.createElement("th");
+tr.appendChild(th);
+
+for (let i = 0; i < hours.length; i++) {
+  let th = document.createElement("th");
+  tr.appendChild(th);
+  th.textContent = hours[i];
+}
+
+let total = document.createElement("th");
+tr.appendChild(total);
+total.textContent = "Daily Location Total ";
+
+
+
+let newArea = new SalmonCookies(locationName, max , min , 	Avg );
+
+newArea.customerperHour();
+newArea.cookiesPerhour();
+newArea.summation();
+newArea.render();
+
+
+
+// let rowCount = table.rows.length;
+// let row = table.insertRow(rowCount);
+// row.textContent = newArea.cookiesPerhour();
 let seattle = new SalmonCookies("seattle", 23, 65	, 6.3);
 seattle.customerperHour();
 seattle.cookiesPerhour();
@@ -128,7 +199,9 @@ Lima.render();
 
 
 
+
 let arrofobjects=[seattle,Tokyo,Dubai,Paris,Lima];
+arrofobjects.push(newArea) ; 
 
 totalito();
 
@@ -161,6 +234,58 @@ trTotal.appendChild(td);
 td.textContent=grandSum
 
 }
+}
+
+
+
+
+
+
+
+
+
+// totalito();
+
+// function totalito () {
+// let trTotal = document.createElement("tr");
+// table.appendChild(trTotal);
+// trTotal.textContent = "Total";
+
+
+// let grandSum = 0 ;
+// let summationPerour ;
+// let td ;
+// for (let i=0 ; i<hours.length ; i++){
+//   summationPerour = 0
+//   // grandSum = 0 
+//   for (let j =0 ; j< arrofobjects.length ; j++){
+//     summationPerour = summationPerour + arrofobjects[j].cookperHour[i]
+
+//   }
+
+//   td = document.createElement('td');
+//   trTotal.appendChild(td);
+//   td.textContent = summationPerour
+
+//    grandSum += summationPerour
+// }
+
+// td = document.createElement('td') ;
+// trTotal.appendChild(td);
+// td.textContent=grandSum
+
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
