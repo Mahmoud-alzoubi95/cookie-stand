@@ -57,29 +57,11 @@ SalmonCookies.prototype.summation = function () {
   return this.sum;
 };
 
-// let tr = document.createElement("tr");
-// table.appendChild(tr);
-// let th = document.createElement("th");
-// tr.appendChild(th);
-
-// for (let i = 0; i < hours.length; i++) {
-//   let th = document.createElement("th");
-//   tr.appendChild(th);
-//   th.textContent = hours[i];
-// }
-
-// let total = document.createElement("th");
-// tr.appendChild(total);
-// total.textContent = "Daily Location Total ";
-
 SalmonCookies.prototype.render = function () {
   let tr1 = document.createElement("tr");
   table.appendChild(tr1);
   tr1.textContent = this.country;
 
-  // let tdCountry = document.createElement("td");
-  // tr1.appendChild(tdCountry);
-  // tdCountry.textContent = shops;
   let td;
   for (let i = 0; i < this.cookperHour.length; i++) {
     td = document.createElement("td");
@@ -91,16 +73,6 @@ SalmonCookies.prototype.render = function () {
   tr1.appendChild(tdsum);
   tdsum.textContent = this.sum;
 };
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -116,7 +88,6 @@ function newlocatoincrearting (event) {
 
   let locationName = event.target.lacationname.value;
   // lacationname = lacationname.split();
-  //   console.log(lacationname);
 
     let max = event.target.maximumValue.value;
      max = parseInt(max);
@@ -128,14 +99,8 @@ function newlocatoincrearting (event) {
      let Avg = event.target.averageValue.value;
      Avg = parseFloat(Avg);
 
-    
 
-
-
-
-
-
-table.innerHTML = "";
+table.textContent = "";
 
 let tr = document.createElement("tr");
 table.appendChild(tr);
@@ -153,19 +118,6 @@ tr.appendChild(total);
 total.textContent = "Daily Location Total ";
 
 
-
-let newArea = new SalmonCookies(locationName, max , min , 	Avg );
-
-newArea.customerperHour();
-newArea.cookiesPerhour();
-newArea.summation();
-newArea.render();
-
-
-
-// let rowCount = table.rows.length;
-// let row = table.insertRow(rowCount);
-// row.textContent = newArea.cookiesPerhour();
 let seattle = new SalmonCookies("seattle", 23, 65	, 6.3);
 seattle.customerperHour();
 seattle.cookiesPerhour();
@@ -196,8 +148,24 @@ Lima.cookiesPerhour();
 Lima.summation();
 Lima.render();
 
+let newArea = new SalmonCookies(locationName, max , min , 	Avg );
+newArea.customerperHour();
+newArea.cookiesPerhour();
+newArea.summation();
+newArea.render();
 
+// let trnew =document.createElement("tr")
+// table.appendChild(trnew);
+// trnew.textContent=locationName ;
 
+// for (let i = 0; i < this.cookperHour.length; i++) {
+//   let newtd = document.createElement("tr")
+//   trnew.appendChild(newtd);
+//   newtd.textContent = this.cookperHour[i];
+// }
+// let tdsummation = document.createElement("td");
+// trnew.appendChild(tdsummation);
+// tdsummation.textContent = this.sum;
 
 
 let arrofobjects=[seattle,Tokyo,Dubai,Paris,Lima];
@@ -215,10 +183,9 @@ let grandSum = 0 ;
 let summationPerour ;
 let td ;
 for (let i=0 ; i<hours.length ; i++){
-  summationPerour = 0
-  // grandSum = 0 
+  summationPerour = 0 
   for (let j =0 ; j< arrofobjects.length ; j++){
-    summationPerour = summationPerour + arrofobjects[j].cookperHour[i]
+  summationPerour = summationPerour + arrofobjects[j].cookperHour[i]
 
   }
 
