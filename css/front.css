@@ -1,12 +1,54 @@
 *{
     box-sizing:border-box ;
 }
-header {
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #313131;
+    /* background-image: url(/img/—Pngtree—gold\ marble\ texture\ background\ white_1226684.jpg); */
+}
+
+.slider {
+    position: relative;
+    width: 600px;
+    height: 400px; ;
+    background : url(/img/family.jpg);
+    /* margin: 50px auto; */
+    left : 500px;
+    bottom: 60
+    px;
+    animation: slide 10s infinite ;
+}
+
+@keyframes slide {
+    15%{
+        background : url(/img/family.jpg);
+    }
+    25%{
+        background : url(/img/chinook.jpg);
+    }
+    40%{
+        background : url(/img/cutter.jpeg);
+    }
+    60%{
+        background : url(/img/frosted-cookie.jpg);
+    }
+    80%{
+        background : url(/img/fish.jpg);
+    }
+    100%{
+        background : url(/img/shirt.jpg);
+    }
+}
+
+/* header {
     background-color: darkgray;
     height: 60px;
     margin-top: 0%;
     width: 100%;
-}
+} */
 
 
 header div img {
@@ -22,7 +64,7 @@ header div img {
     bottom: 62px;
     font-family: cursive;
     font-size: 20px;
-    color: darkgreen;
+    color: rgb(189, 189, 189);
     left: 10px;
 }
 

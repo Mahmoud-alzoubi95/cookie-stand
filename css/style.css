@@ -16,8 +16,8 @@ header {
 }
 
 .home {
-    background: rgb(56, 70, 70);
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: rgb(16, 54, 45);
     border : 0px ;
     border-radius: 25px;
     padding : 15px 50px ;

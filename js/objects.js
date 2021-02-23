@@ -100,7 +100,7 @@ function newlocatoincrearting (event) {
      Avg = parseFloat(Avg);
 
 
-table.textContent = "";
+table.textContent ="";
 
 let tr = document.createElement("tr");
 table.appendChild(tr);
@@ -154,18 +154,6 @@ newArea.cookiesPerhour();
 newArea.summation();
 newArea.render();
 
-// let trnew =document.createElement("tr")
-// table.appendChild(trnew);
-// trnew.textContent=locationName ;
-
-// for (let i = 0; i < this.cookperHour.length; i++) {
-//   let newtd = document.createElement("tr")
-//   trnew.appendChild(newtd);
-//   newtd.textContent = this.cookperHour[i];
-// }
-// let tdsummation = document.createElement("td");
-// trnew.appendChild(tdsummation);
-// tdsummation.textContent = this.sum;
 
 
 let arrofobjects=[seattle,Tokyo,Dubai,Paris,Lima];
