@@ -87,7 +87,6 @@ function newlocatoincrearting (event) {
   console.log(event);
 
   let locationName = event.target.lacationname.value;
-  // lacationname = lacationname.split();
 
     let max = event.target.maximumValue.value;
      max = parseInt(max);
